@@ -17,9 +17,6 @@ namespace RestWithASPNETUdemy.Controllers
         [HttpGet("sum/{firstNumber}/{secondNumber}")]
         public IActionResult Sum(string firstNumber, string secondNumber)
         {
-            /*ListOfNumbers listOfNumbers = new ListOfNumbers();
-            listOfNumbers.numbers = new string[] { "2", "2", "2"};
-            Console.Write(JsonSerializer.Serialize(listOfNumbers));*/
             if (IsNumeric(firstNumber) && IsNumeric(secondNumber))
             {
                 var sum = ConvertToDecimal(firstNumber) + ConvertToDecimal(secondNumber);
